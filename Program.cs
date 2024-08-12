@@ -13,7 +13,7 @@ public sealed class ToolTipViewModel
 public sealed class ViewLocator : IDataTemplate
 {
     public bool Match(object? data) => data is ToolTipViewModel;
-    public Control? Build(object? param) => new ToolTipView { DataContext = param };
+    public Control? Build(object? param) => new ToolTipView();
 }
 
 internal static class Program
