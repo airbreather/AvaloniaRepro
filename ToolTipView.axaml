@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:avaloniaRepro="clr-namespace:AvaloniaRepro"
              x:DataType="avaloniaRepro:ToolTipViewModel"
-             x:Class="AvaloniaRepro.ToolTipView">
-    <ContentPresenter Content="{Binding Tip, StringFormat='{}{0} (in a tooltip!)'}" />
+             x:Class="AvaloniaRepro.ToolTipView"
+             x:Name="ThisControl">
+    <ContentPresenter Content="{ReflectionBinding DataContext.Tip, ElementName=ThisControl, StringFormat='{}{0} (in a tooltip!)'}" />
 </UserControl>
